@@ -27,6 +27,7 @@ requirements:
     - numpy
     - numba
     - thriftpy
+	- pytest
 
 test:
   imports:
