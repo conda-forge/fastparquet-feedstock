@@ -11,6 +11,18 @@ Summary: Python interface to the parquet format
 
 
 
+Current build status
+====================
+
+Linux: [![Circle CI](https://circleci.com/gh/conda-forge/fastparquet-feedstock.svg?style=shield)](https://circleci.com/gh/conda-forge/fastparquet-feedstock)
+OSX: [![TravisCI](https://travis-ci.org/conda-forge/fastparquet-feedstock.svg?branch=master)](https://travis-ci.org/conda-forge/fastparquet-feedstock)
+Windows: [![AppVeyor](https://ci.appveyor.com/api/projects/status/github/conda-forge/fastparquet-feedstock?svg=True)](https://ci.appveyor.com/project/conda-forge/fastparquet-feedstock/branch/master)
+
+Current release info
+====================
+Version: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/fastparquet/badges/version.svg)](https://anaconda.org/conda-forge/fastparquet)
+Downloads: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/fastparquet/badges/downloads.svg)](https://anaconda.org/conda-forge/fastparquet)
+
 Installing fastparquet
 ======================
 
@@ -31,7 +43,6 @@ It is possible to list all of the versions of `fastparquet` available on your pl
 ```
 conda search fastparquet --channel conda-forge
 ```
-
 
 
 About conda-forge
@@ -67,18 +78,6 @@ Terminology
 
 **conda-forge** - the place where the feedstock and smithy live and work to
                   produce the finished article (built conda distributions)
-
-Current build status
-====================
-
-Linux: [![Circle CI](https://circleci.com/gh/conda-forge/fastparquet-feedstock.svg?style=shield)](https://circleci.com/gh/conda-forge/fastparquet-feedstock)
-OSX: [![TravisCI](https://travis-ci.org/conda-forge/fastparquet-feedstock.svg?branch=master)](https://travis-ci.org/conda-forge/fastparquet-feedstock)
-Windows: [![AppVeyor](https://ci.appveyor.com/api/projects/status/github/conda-forge/fastparquet-feedstock?svg=True)](https://ci.appveyor.com/project/conda-forge/fastparquet-feedstock/branch/master)
-
-Current release info
-====================
-Version: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/fastparquet/badges/version.svg)](https://anaconda.org/conda-forge/fastparquet)
-Downloads: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/fastparquet/badges/downloads.svg)](https://anaconda.org/conda-forge/fastparquet)
 
 
 Updating fastparquet-feedstock
