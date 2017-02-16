@@ -1,7 +1,7 @@
 {% set name = "fastparquet" %}
-{% set version = "0.0.4post1" %}
-{% set fn_suffix = "0.0.4.post1.tar.gz" %}
-{% set sha256 = "3f8e6c21bd26bdb41800e9408fe7560e040d4416e16a1b45b46f61a41d0c2665" %}
+{% set version = "0.0.5" %}
+{% set fn_suffix = "0.0.5.tar.gz" %}
+{% set sha256 = "38d003fda383f7d90005011e926a75909c9d804a31c7fc943600d25c1b5762c3" %}
 
 package:
   name: {{ name }}
@@ -21,6 +21,7 @@ requirements:
   build:
     - python
     - setuptools
+    - cython
   run:
     - python
     - pandas
@@ -28,6 +29,7 @@ requirements:
     - numba
     - thriftpy
     - pytest
+    - cython
 
 test:
   imports:
