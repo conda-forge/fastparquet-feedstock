@@ -3,7 +3,7 @@ About fastparquet
 
 Home: http://github.com/martindurant/fastparquet
 
-Package license: Apache-2.0
+Package license: MIT
 
 Feedstock license: BSD 3-Clause
 
