@@ -1,7 +1,7 @@
 {% set name = "fastparquet" %}
-{% set version = "0.0.5" %}
-{% set fn_suffix = "0.0.5.tar.gz" %}
-{% set sha256 = "38d003fda383f7d90005011e926a75909c9d804a31c7fc943600d25c1b5762c3" %}
+{% set version = "0.0.6" %}
+{% set fn_suffix = "0.0.6.tar.gz" %}
+{% set sha256 = "4b1d55eec6d971be55918a6fdd3bbc1c6bc62cbaac5f63318d866d3e3c9a8262" %}
 
 package:
   name: {{ name }}
@@ -37,8 +37,8 @@ test:
 
 about:
   home: http://github.com/martindurant/fastparquet
-  license: Apache-2.0
-  license_family: Apache
+  license: BSD-3
+  license_family: 'BSD'
   license_file: LICENSE
   summary: 'Python interface to the parquet format'
   dev_url: https://github.com/martindurant/fastparquet
