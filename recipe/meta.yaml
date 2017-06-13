@@ -37,8 +37,8 @@ test:
 
 about:
   home: http://github.com/martindurant/fastparquet
-  license: BSD-3
-  license_family: 'BSD'
+  license: 'Apache 2.0'
+  license_family: 'Apache'
   license_file: LICENSE
   summary: 'Python interface to the parquet format'
   dev_url: https://github.com/martindurant/fastparquet
