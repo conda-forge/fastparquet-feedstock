@@ -1,7 +1,7 @@
 {% set name = "fastparquet" %}
-{% set version = "0.1.1" %}
-{% set fn_suffix = "0.1.1.tar.gz" %}
-{% set sha256 = "189105b53f56b5ed4d9077a0b22de0055b79917ae9a083dfb7abe9453d754d28" %}
+{% set version = "0.1.2" %}
+{% set fn_suffix = "0.1.2.tar.gz" %}
+{% set sha256 = "f44b5f8b93c8cd1574a40a6b8787cfe0464e73fbf951adb6f1bc35cfd951fad4" %}
 
 package:
   name: {{ name }}
@@ -25,9 +25,9 @@ requirements:
   run:
     - python
     - pandas
-    - numpy
-    - numba
-    - thriftpy
+    - numpy >=1.11
+    - numba >=0.28
+    - thrift >=0.10
     - pytest
     - cython
 
