@@ -3,7 +3,7 @@ About fastparquet
 
 Home: http://github.com/martindurant/fastparquet
 
-Package license: MIT
+Package license: BSD-3
 
 Feedstock license: BSD 3-Clause
 
