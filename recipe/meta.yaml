@@ -28,7 +28,7 @@ requirements:
     - pandas >=0.19
     - numpy >=1.11
     - numba >=0.28
-    - thrift =0.11
+    - thrift 0.11.*
     - pytest
 
 test:
