@@ -1,7 +1,7 @@
 {% set name = "fastparquet" %}
-{% set version = "0.1.3" %}
-{% set fn_suffix = "0.1.3.tar.gz" %}
-{% set sha256 = "ff7f28f0fe580919a55a9e98710c431ba002163106043b1fcde013bf9013feb8" %}
+{% set version = "0.1.4" %}
+{% set fn_suffix = "0.1.4.tar.gz" %}
+{% set sha256 = "4eba698969a7691acae973ad872dcbe3014bef5c446458897627541ac44a21e0" %}
 
 package:
   name: {{ name }}
@@ -22,26 +22,26 @@ requirements:
     - setuptools
     - cython
     - numpy
+    - pytest-runner
   run:
     - python
-    - pandas
+    - pandas >=0.19
     - numpy >=1.11
     - numba >=0.28
-    - thrift >=0.10
+    - thrift =0.11
     - pytest
-    - cython
 
 test:
   imports:
     - fastparquet
 
 about:
-  home: http://github.com/martindurant/fastparquet
+  home: http://github.com/dask/fastparquet
   license: BSD-3
   license_family: 'BSD'
   license_file: LICENSE
   summary: 'Python interface to the parquet format'
-  dev_url: https://github.com/martindurant/fastparquet
+  dev_url: https://github.com/dask/fastparquet
 
 extra:
   recipe-maintainers:
