@@ -1,7 +1,7 @@
 {% set name = "fastparquet" %}
-{% set version = "0.1.4" %}
-{% set fn_suffix = "0.1.4.tar.gz" %}
-{% set sha256 = "4eba698969a7691acae973ad872dcbe3014bef5c446458897627541ac44a21e0" %}
+{% set version = "0.1.5" %}
+{% set fn_suffix = "0.1.5.tar.gz" %}
+{% set sha256 = "a1826e34cc12436d9aaa4779209a701e606a663433a1f5b2b8d351c14f03e480" %}
 
 package:
   name: {{ name }}
