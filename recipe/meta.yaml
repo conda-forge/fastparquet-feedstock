@@ -1,19 +1,17 @@
 {% set name = "fastparquet" %}
 {% set version = "0.2.1" %}
-{% set fn_suffix = "0.1.6.tar.gz" %}
-{% set sha256 = "f820626401f59037048a2472fc2f325d0193de3290fd48c012436d7b3a026d14" %}
+{% set sha256 = "5e35a0aefc8db775397c503b7c2373892c8bc9136d5804d2699a5a68616d7ca0" %}
 
 package:
   name: {{ name }}
   version: "{{ version }}"
 
 source:
-  fn: {{ name }}-{{ fn_suffix }}
-  url: https://pypi.io/packages/source/f/{{ name }}/{{ name }}-{{ fn_suffix }}
+  url: https://pypi.io/packages/source/f/{{ name }}/{{ name }}-{{ version  }}.tar.gz
   sha256: "{{ sha256 }}"
 
 build:
-  number: 1000
+  number: 1001
   script: python setup.py install --single-version-externally-managed --record record.txt
 
 requirements:
