@@ -1,6 +1,6 @@
 {% set name = "fastparquet" %}
-{% set version = "0.2.1" %}
-{% set sha256 = "5e35a0aefc8db775397c503b7c2373892c8bc9136d5804d2699a5a68616d7ca0" %}
+{% set version = "0.3.0" %}
+{% set sha256 = "cab1de69c2f941c1e56b70933ed981d3577e176b3fbcd699b3b2d0b09363885c" %}
 
 package:
   name: {{ name }}
@@ -11,7 +11,7 @@ source:
   sha256: "{{ sha256 }}"
 
 build:
-  number: 1001
+  number: 0
   script: python setup.py install --single-version-externally-managed --record record.txt
 
 requirements:
