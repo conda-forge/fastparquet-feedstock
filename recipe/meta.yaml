@@ -19,7 +19,7 @@ requirements:
     - {{ compiler('c') }}
   host:
     - python
-    - pip
+    - pip 
     - setuptools
     - cython
     - numpy
