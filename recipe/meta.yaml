@@ -32,6 +32,8 @@ requirements:
     - setuptools
     - numpy
     - pytest-runner
+    - numba
+    - thrift
   run:
     - python
     - pandas >=0.19
