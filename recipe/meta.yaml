@@ -24,10 +24,12 @@ requirements:
     - pytest-runner
     - numba
     - thrift
+    - pandas
     - {{ pin_compatible('numpy') }}
   host:
     - {{ compiler('c') }}
     - python
+    - pandas
     - pip
     - setuptools
     - numpy
