@@ -20,7 +20,7 @@ requirements:
     - pip 
     - setuptools
     - cython
-    - numpy
+    - numpy >=1.11
     - pytest-runner
     - numba
     - thrift
@@ -32,7 +32,7 @@ requirements:
     - pandas
     - pip
     - setuptools
-    - numpy
+    - numpy >=1.11
     - pytest-runner
     - numba
     - thrift
