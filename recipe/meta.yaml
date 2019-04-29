@@ -1,6 +1,6 @@
 {% set name = "fastparquet" %}
-{% set version = "0.2.1" %}
-{% set sha256 = "5e35a0aefc8db775397c503b7c2373892c8bc9136d5804d2699a5a68616d7ca0" %}
+{% set version = "0.3.1" %}
+{% set sha256 = "f18f22ba31cb54efff00980f53d4a77b4027bbdb0a5cf1c4644113551196c0f0" %}
 
 package:
   name: {{ name }}
@@ -11,18 +11,30 @@ source:
   sha256: "{{ sha256 }}"
 
 build:
-  number: 1001
-  script: python setup.py install --single-version-externally-managed --record record.txt
+  number: 0
+  script: "{{ PYTHON }} -m pip install . --no-deps -vv "
 
 requirements:
   build:
-    - {{ compiler('c') }}
-  host:
     - python
+    - pip 
     - setuptools
     - cython
-    - numpy
+    - numpy >=1.11
     - pytest-runner
+    - numba
+    - thrift
+    - pandas
+  host:
+    - {{ compiler('c') }}
+    - python
+    - pandas
+    - pip
+    - setuptools
+    - numpy >=1.11
+    - pytest-runner
+    - numba
+    - thrift
   run:
     - python
     - pandas >=0.19
