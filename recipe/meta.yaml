@@ -22,6 +22,8 @@ requirements:
     - cython
     - numpy
     - pytest-runner
+    - numba
+    - thrift
   host:
     - {{ compiler('c') }}
     - python
