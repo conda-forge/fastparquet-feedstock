@@ -25,7 +25,6 @@ requirements:
     - numba
     - thrift
     - pandas
-    - {{ pin_compatible('numpy') }}
   host:
     - {{ compiler('c') }}
     - python
