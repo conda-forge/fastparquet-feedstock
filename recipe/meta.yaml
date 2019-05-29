@@ -11,7 +11,7 @@ source:
   sha256: "{{ sha256 }}"
 
 build:
-  number: 0
+  number: 1
   script: "{{ PYTHON }} -m pip install . --no-deps -vv "
 
 requirements:
@@ -41,7 +41,6 @@ requirements:
     - numpy >=1.11
     - numba >=0.28
     - thrift 0.11.*
-    - pytest
 
 test:
   imports:
