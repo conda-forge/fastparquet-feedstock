@@ -11,36 +11,31 @@ source:
   sha256: "{{ sha256 }}"
 
 build:
-  number: 1
-  script: "{{ PYTHON }} -m pip install . --no-deps -vv "
+  number: 2
+  script:
+    - del fastparquet\*.c  # [win]      
+    - rm fastparquet/*.c   # [unix]      
+    - "{{ PYTHON }} -m pip install . --no-deps -vv "
 
 requirements:
   build:
-    - python
-    - pip 
-    - setuptools
-    - cython
-    - numpy >=1.11
-    - pytest-runner
-    - numba
-    - thrift
-    - pandas
-  host:
     - {{ compiler('c') }}
+  host:
     - python
+    - cython
     - pandas
     - pip
     - setuptools
-    - numpy >=1.11
+    - numpy
     - pytest-runner
     - numba
-    - thrift
+    - thrift 0.11
   run:
     - python
     - pandas >=0.19
-    - numpy >=1.11
+    - numpy
     - numba >=0.28
-    - thrift 0.11.*
+    - thrift 0.11
 
 test:
   imports:
