@@ -1,21 +1,21 @@
 {% set name = "fastparquet" %}
-{% set version = "0.3.3" %}
-{% set sha256 = "c625f3405c6bb5d1e1f4a47632778d51c75c663711bce3c9767ac987fbf6c8ea" %}
+{% set version = "0.4.0" %}
+{% set sha256 = "edb8c758c2d70a5d2958bb56dd0580519f69de95748bb6ea7d5f57cbe6a01c6a" %}
 
 package:
   name: {{ name }}
-  version: "{{ version }}"
+  version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/f/{{ name }}/{{ name }}-{{ version  }}.tar.gz
-  sha256: "{{ sha256 }}"
+  url: https://pypi.io/packages/source/f/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  sha256: {{ sha256 }}
 
 build:
   number: 0
   script:
     - del fastparquet\*.c  # [win]      
     - rm fastparquet/*.c   # [unix]      
-    - "{{ PYTHON }} -m pip install . --no-deps -vv "
+    - '{{ PYTHON }} -m pip install . --no-deps -vv '
 
 requirements:
   build:
@@ -44,9 +44,9 @@ test:
 about:
   home: http://github.com/dask/fastparquet
   license: BSD-3
-  license_family: 'BSD'
+  license_family: BSD
   license_file: LICENSE
-  summary: 'Python interface to the parquet format'
+  summary: Python interface to the parquet format
   dev_url: https://github.com/dask/fastparquet
 
 extra:
