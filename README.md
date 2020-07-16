@@ -5,7 +5,7 @@ Home: http://github.com/dask/fastparquet
 
 Package license: BSD-3
 
-Feedstock license: BSD 3-Clause
+Feedstock license: BSD-3-Clause
 
 Summary: Python interface to the parquet format
 
