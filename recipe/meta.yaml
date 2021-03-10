@@ -30,14 +30,14 @@ requirements:
     - pytest-runner
     - numba
     - packaging
-    - thrift 0.11
+    - thrift >=0.11
   run:
     - python
     - pandas >=0.19
     - numpy
     - packaging
     - numba >=0.28
-    - thrift 0.11
+    - thrift >=0.11
 
 test:
   imports:
