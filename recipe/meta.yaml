@@ -45,8 +45,7 @@ test:
 
 about:
   home: http://github.com/dask/fastparquet
-  license: BSD-3
-  license_family: BSD
+  license: BSD-3-Clause
   license_file: LICENSE
   summary: Python interface to the parquet format
   dev_url: https://github.com/dask/fastparquet
