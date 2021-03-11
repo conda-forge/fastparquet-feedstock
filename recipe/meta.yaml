@@ -19,6 +19,10 @@ build:
 
 requirements:
   build:
+    - python                                 # [build_platform != target_platform]
+    - cross-python_{{ target_platform }}     # [build_platform != target_platform]
+    - cython                                 # [build_platform != target_platform]
+    - numpy                                  # [build_platform != target_platform]
     - {{ compiler('c') }}
   host:
     - python
@@ -30,14 +34,14 @@ requirements:
     - pytest-runner
     - numba
     - packaging
-    - thrift 0.11
+    - thrift >=0.11
   run:
     - python
     - pandas >=0.19
     - numpy
     - packaging
     - numba >=0.28
-    - thrift 0.11
+    - thrift >=0.11
 
 test:
   imports:
@@ -45,8 +49,7 @@ test:
 
 about:
   home: http://github.com/dask/fastparquet
-  license: BSD-3
-  license_family: BSD
+  license: BSD-3-Clause
   license_file: LICENSE
   summary: Python interface to the parquet format
   dev_url: https://github.com/dask/fastparquet
