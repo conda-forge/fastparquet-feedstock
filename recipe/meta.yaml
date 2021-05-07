@@ -1,17 +1,17 @@
 {% set name = "fastparquet" %}
-{% set version = "0.5.0" %}
-{% set sha256 = "3b558059327dce2c73a775aa2f2029e052fcf6e61880e15681e04ede5f0f20b7" %}
+{% set version = "0.6.0" %}
+{% set sha256 = "4d64bc60ef450eb9b4689dcd57d6cda7dd5eb23c47d5b97b5e06b661956b2062" %}
 
 package:
   name: {{ name }}
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/f/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  url: https://pypi.io/packages/source/f/{{ name }}/{{ name }}-{{ version }}.post1.tar.gz
   sha256: {{ sha256 }}
 
 build:
-  number: 1
+  number: 0
   script:
     - del fastparquet\*.c  # [win]      
     - rm fastparquet/*.c   # [unix]      
@@ -42,6 +42,7 @@ requirements:
     - packaging
     - numba >=0.28
     - thrift >=0.11
+    - cramjam >=2.3.0
 
 test:
   imports:
