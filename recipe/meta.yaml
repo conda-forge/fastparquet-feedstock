@@ -1,13 +1,13 @@
 {% set name = "fastparquet" %}
-{% set version = "0.6.0" %}
-{% set sha256 = "4d64bc60ef450eb9b4689dcd57d6cda7dd5eb23c47d5b97b5e06b661956b2062" %}
+{% set version = "0.6.1" %}
+{% set sha256 = "45714733006d0be76d6b8dd2a941a966e3e732b41a6d30d435c22cbe6716899b" %}
 
 package:
   name: {{ name }}
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/f/{{ name }}/{{ name }}-{{ version }}.post1.tar.gz
+  url: https://pypi.io/packages/source/f/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: {{ sha256 }}
 
 build:
@@ -39,10 +39,9 @@ requirements:
     - python
     - pandas >=0.19
     - numpy
-    - packaging
-    - numba >=0.28
     - thrift >=0.11
     - cramjam >=2.3.0
+    - fsspec
 
 test:
   imports:
