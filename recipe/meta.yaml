@@ -41,6 +41,7 @@ requirements:
     - numpy
     - thrift >=0.11
     - cramjam >=2.3.0
+    - fsspec
 
 test:
   imports:
