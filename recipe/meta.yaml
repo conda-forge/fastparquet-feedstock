@@ -32,7 +32,6 @@ requirements:
     - setuptools
     - numpy
     - pytest-runner
-    - numba
     - packaging
     - thrift >=0.11
   run:
