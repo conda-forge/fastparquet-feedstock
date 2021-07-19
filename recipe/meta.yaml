@@ -11,7 +11,7 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 0
+  number: 1
   script:
     - del fastparquet\*.c  # [win]      
     - rm fastparquet/*.c   # [unix]      
@@ -36,7 +36,7 @@ requirements:
     - thrift >=0.11
   run:
     - python
-    - pandas >=0.19
+    - pandas >=1.0.0
     - numpy
     - thrift >=0.11
     - cramjam >=2.3.0
