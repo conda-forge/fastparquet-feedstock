@@ -15,7 +15,7 @@ build:
   script:
     - del fastparquet\*.c  # [win]      
     - rm fastparquet/*.c   # [unix]    
-    - '{{ PYTHON }} un_oldest.py'
+    - '{{ PYTHON }} {{RECIPE_DIR}}/un_oldest.py'
     - '{{ PYTHON }} -m pip install . --no-deps -vv '
 
 requirements:
