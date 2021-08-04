@@ -14,7 +14,9 @@ build:
   number: 0
   script:
     - del fastparquet\*.c  # [win]      
-    - rm fastparquet/*.c   # [unix]      
+    - rm fastparquet/*.c   # [unix]    
+    - |
+      {{ PYTHON }} -c 'lines=open("setup.py").readlines();open("setup.py", "w").writelines([l for l in lines if "oldest-supported-numpy" not in l])'
     - '{{ PYTHON }} -m pip install . --no-deps -vv '
 
 requirements:
@@ -26,6 +28,7 @@ requirements:
     - {{ compiler('c') }}
   host:
     - python
+    - sed
     - cython
     - pandas
     - pip
@@ -34,12 +37,10 @@ requirements:
     - pytest-runner
     - packaging
     - thrift >=0.11
-    - pip:
-      - oldest-supported-numpy
   run:
     - python
     - pandas >=1.0.0
-    - numpy
+    - {{ pin_compatible('numpy') }}
     - thrift >=0.11
     - cramjam >=2.3.0
     - fsspec
