@@ -28,7 +28,6 @@ requirements:
     - {{ compiler('c') }}
   host:
     - python
-    - sed
     - cython
     - pandas
     - pip
