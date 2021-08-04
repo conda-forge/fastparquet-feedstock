@@ -15,8 +15,7 @@ build:
   script:
     - del fastparquet\*.c  # [win]      
     - rm fastparquet/*.c   # [unix]    
-    - |
-      (echo 'lines=open("setup.py").readlines()'; echo 'open("setup.py", "w").writelines([l for l in lines if "oldest-supported-numpy" not in l])' ) | {{ PYTHON }}
+    - '{{ PYTHON }} un_oldest.py'
     - '{{ PYTHON }} -m pip install . --no-deps -vv '
 
 requirements:
