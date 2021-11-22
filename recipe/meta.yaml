@@ -1,6 +1,6 @@
 {% set name = "fastparquet" %}
-{% set version = "0.7.1" %}
-{% set sha256 = "3b8906f3aa94539e2849927fae572c93d9ed229ecf39032f0a42b47e06dfb569" %}
+{% set version = "0.7.2" %}
+{% set sha256 = "3c4bd638260357df55a9e71d0bd797c12f14f691a61dfd91a66f5b8d2a247683" %}
 
 package:
   name: {{ name }}
@@ -15,7 +15,7 @@ build:
   script:
     - del fastparquet\*.c  # [win]      
     - rm fastparquet/*.c   # [unix]    
-    - '{{ PYTHON }} {{ RECIPE_DIR }}/un_oldest.py'
+    - {{ PYTHON }} {{ RECIPE_DIR }}/un_oldest.py
     - '{{ PYTHON }} -m pip install . --no-deps -vv '
 
 requirements:
