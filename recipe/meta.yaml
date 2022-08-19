@@ -40,6 +40,7 @@ requirements:
     - {{ pin_compatible('numpy') }}
     - cramjam >=2.3.0
     - fsspec
+    - packaging
 
 test:
   imports:
