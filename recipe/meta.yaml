@@ -35,7 +35,7 @@ requirements:
     - pytest-runner
     - packaging
   run:
-    - python
+    - python >=3.7
     - pandas >=1.0.0
     - {{ pin_compatible('numpy') }}
     - cramjam >=2.3.0
