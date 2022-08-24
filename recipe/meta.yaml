@@ -1,6 +1,6 @@
 {% set name = "fastparquet" %}
-{% set version = "0.8.1" %}
-{% set sha256 = "8dea4019863dc815627de009131c76185bbf3d76fafa82d96e9df23a7a1718c3" %}
+{% set version = "0.8.2" %}
+{% set sha256 = "7f54bb4718b6b360d8c864060b9bab88fd675709d5f3d8bae335aece9cb7fd53" %}
 
 package:
   name: {{ name }}
@@ -11,6 +11,7 @@ source:
   sha256: {{ sha256 }}
 
 build:
+  skip: true  # [py<38]
   number: 0
   script:
     - del fastparquet\*.c  # [win]      
@@ -27,7 +28,7 @@ requirements:
     - {{ compiler('c') }}
   host:
     - python
-    - cython
+    - cython <3
     - pandas
     - pip
     - setuptools
@@ -40,6 +41,7 @@ requirements:
     - {{ pin_compatible('numpy') }}
     - cramjam >=2.3.0
     - fsspec
+    - packaging
 
 test:
   imports:
