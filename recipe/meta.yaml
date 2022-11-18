@@ -1,6 +1,6 @@
 {% set name = "fastparquet" %}
-{% set version = "0.8.3" %}
-{% set sha256 = "454e8ec51f36ffae6e3d7814197c44db6e88ce281d2efba22ed516958a422c7e" %}
+{% set version = "2022.11.0" %}
+{% set sha256 = "cb5dfd69fc6ae0f47f0e2d6d1e8c339ebe73f52212e60a1d59f121e3972e2554" %}
 
 package:
   name: {{ name }}
@@ -12,7 +12,7 @@ source:
 
 build:
   skip: true  # [py<38]
-  number: 1
+  number: 0
   script:
     - del fastparquet\*.c  # [win]      
     - rm fastparquet/*.c   # [unix]    
