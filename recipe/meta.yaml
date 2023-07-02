@@ -1,5 +1,5 @@
 {% set name = "fastparquet" %}
-{% set version = "2023.4.0" %}
+{% set version = "2023.7.0" %}
 
 package:
   name: {{ name }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/f/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 917e6d288ea07e10b28b5fa4b4c0b70f60b14971ece3ba5bf30690320a53aa70
+  sha256: 66ee6448fd8750d7028ccea2072f404ab05e4e00d98fd33f02dad1260e819aaf
 
 build:
   skip: true  # [py<38]
@@ -40,7 +40,7 @@ requirements:
     - pandas >=1.5.0
     - numpy >=1.20.3
     - {{ pin_compatible('numpy') }}
-    - cramjam >=2.3.0
+    - cramjam >=2.3
     - fsspec
     - packaging
 
