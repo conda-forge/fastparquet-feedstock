@@ -1,5 +1,5 @@
 {% set name = "fastparquet" %}
-{% set version = "2023.8.0" %}
+{% set version = "2023.10.0" %}
 
 package:
   name: {{ name }}
@@ -7,11 +7,11 @@ package:
 
 source:
   url: https://pypi.io/packages/source/f/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 2ff39bc20869829ea8fd85bf0336c5006d0ffcc276d0de070030cf8ffd929160
+  sha256: 83136043a499d3fccc31e8d9e214e9077c7d6a813cd8e2252825190cc269b34b
 
 build:
   skip: true  # [py<38]
-  number: 1
+  number: 0
   script:
     - del fastparquet\*.c  # [win]      
     - rm fastparquet/*.c   # [unix]    
