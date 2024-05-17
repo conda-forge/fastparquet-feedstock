@@ -11,7 +11,7 @@ source:
 
 build:
   skip: true  # [py<38]
-  number: 0
+  number: 1
   script:
     - del fastparquet\*.c  # [win]      
     - rm fastparquet/*.c   # [unix]    
@@ -25,6 +25,7 @@ requirements:
     - cython <3                              # [build_platform != target_platform]
     - numpy                                  # [build_platform != target_platform]
     - {{ compiler('c') }}
+    - {{ stdlib("c") }}
   host:
     - python
     - cython <3
@@ -39,7 +40,6 @@ requirements:
     - python
     - pandas >=1.5.0
     - numpy >=1.20.3
-    - {{ pin_compatible('numpy') }}
     - cramjam >=2.3
     - fsspec
     - packaging
