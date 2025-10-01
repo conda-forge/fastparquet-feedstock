@@ -6,12 +6,12 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/f/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/f/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: e3b1fc73fd3e1b70b0de254bae7feb890436cb67e99458b88cb9bd3cc44db419
 
 build:
   skip: true  # [py<39]
-  number: 0
+  number: 1
   script:
     - del fastparquet\*.c  # [win]      
     - rm fastparquet/*.c   # [unix]    
