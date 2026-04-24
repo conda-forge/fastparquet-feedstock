@@ -1,17 +1,15 @@
-{% set name = "fastparquet" %}
 {% set version = "2025.12.0" %}
 
 package:
-  name: {{ name }}
+  name: fastparquet
   version: {{ version }}
 
 source:
-  url: https://pypi.org/packages/source/f/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/f/fastparquet/fastparquet-{{ version }}.tar.gz
   sha256: 85f807d3846c7691855a68ed7ff6ee40654b72b997f5b1199e6310a1e19d1cd5
 
 build:
-  skip: true  # [py<39]
-  number: 0
+  number: 1
   script:
     - del fastparquet\*.c  # [win]      
     - rm fastparquet/*.c   # [unix]    
