@@ -1,13 +1,13 @@
 {% set name = "fastparquet" %}
-{% set version = "2026.5.0" %}
+{% set version = "2026.9.0" %}
 
 package:
   name: {{ name }}
   version: {{ version }}
 
 source:
-  url: https://pypi.org/packages/source/f/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 12a813d1c91b9d316a8d43860074daf4566849f776f9cd549742aa71d907e4f6
+  url: https://files.pythonhosted.org/packages/source/f/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  sha256: bdf391e7d212707c884ad0ea6047719b7a1b2b4642b8d79d223b4d745f3bd4bb
 
 build:
   skip: true  # [py<39]
